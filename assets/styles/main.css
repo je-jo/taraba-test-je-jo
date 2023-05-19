@@ -3,6 +3,36 @@ $fs-h2: 1.8rem;
 $fs-lead: 1.125rem; 
 $fs-h2: 1.5em;
 $para: 15px; */
+.placeholder--img {
+  width: 300px;
+  height: 300px;
+  background-color: lightgreen;
+}
+
+.placeholder--ico {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: lightgreen;
+}
+
+.placeholder--vid {
+  width: 300px;
+  height: 200px;
+  background-color: salmon;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: bisque;
+}
+
+.btn {
+  padding: 0.3rem;
+  background-color: thistle;
+}
+
 /*
 * Andy Bell's Modern CSS Reset modified my Stephanie Eckless
 * @link https://github.com/5t3ph/html-sass-jumpstart/blob/main/src/sass/_reset.scss
