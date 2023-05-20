@@ -32,24 +32,7 @@ $border-radius: 6px;
 
 /// shame
 /// 
-.placeholder--img {
-    width: 300px;
-    height: 300px;
-    background-color: lightgreen;
-}
 
-.placeholder--ico {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-color: lightgreen;
-}
-
-.placeholder--vid {
-    width: 300px;
-    height: 200px;
-    background-color: salmon;
-}
 .card {
     margin: 1rem;
     padding: 1rem;
@@ -60,3 +43,25 @@ $border-radius: 6px;
     padding: 0.3rem;
     background-color: thistle;
 }
+
+.list--staticdynamic>li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    &::before {
+        content: url("../images/home/staticdynamic/validation-icon.SVG");
+        width: 14px;
+    }
+}
+
+iframe {
+    border-radius: 15px;
+}
+
+#features h3::before {
+    display: block;
+    content: url("../images/home/features/features-icon.svg");
+    width: 14px;
+    height: 14px;
+}
+
