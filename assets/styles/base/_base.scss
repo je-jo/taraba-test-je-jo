@@ -22,11 +22,15 @@ body {
     font-family: $sans-serif-stack;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    place-items: center;
+    // place-items: center;
     // line-height: unset;
     // text-align: center;
     background-color: $bg-color;
     color: $text-color;
+}
+
+img {
+    height: auto;
 }
 
 /**
