@@ -46,22 +46,18 @@ $border-radius: 6px;
 
 .list--staticdynamic>li {
     display: grid;
+    align-items: center;
     grid-template-columns: auto 1fr;
     gap: 0.5rem;
-    &::before {
-        content: url("../images/home/staticdynamic/validation-icon.SVG");
-        width: 14px;
-    }
+}
+
+svg {
+    color: $orange;
+    fill: $orange;
 }
 
 iframe {
     border-radius: 15px;
 }
 
-#features h3::before {
-    display: block;
-    content: url("../images/home/features/features-icon.svg");
-    width: 14px;
-    height: 14px;
-}
 

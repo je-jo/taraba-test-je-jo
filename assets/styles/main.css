@@ -16,23 +16,18 @@ $para: 15px; */
 
 .list--staticdynamic > li {
   display: grid;
+  align-items: center;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
 }
-.list--staticdynamic > li::before {
-  content: url("../images/home/staticdynamic/validation-icon.SVG");
-  width: 14px;
+
+svg {
+  color: hsl(31, 100%, 61%);
+  fill: hsl(31, 100%, 61%);
 }
 
 iframe {
   border-radius: 15px;
-}
-
-#features h3::before {
-  display: block;
-  content: url("../images/home/features/features-icon.svg");
-  width: 14px;
-  height: 14px;
 }
 
 /*
