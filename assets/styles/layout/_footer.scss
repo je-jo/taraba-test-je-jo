@@ -1,0 +1,108 @@
+footer {
+    display: grid;
+    text-align: center;
+    grid-template-areas:
+    "social"
+    "bottomnav"
+    "familylinks"
+    "copyright";
+    gap: 27px;
+    // padding: 30px 41px 16px;
+    padding-top: 30px;
+    @include breakpoint-up("medium") {
+        grid-template-areas:
+        "social bottomnav familylinks"
+        "copyright bottomnav familylinks";
+        // grid-template-columns: 27% 40% 33%;
+        padding-left: 2.5rem;
+        text-align: unset;
+    }
+}
+
+.footer__social {
+    display: grid;
+    justify-items: center;
+    // padding: 0 2.5rem;
+    gap: 1rem;
+    &-logo {
+        max-width: 88px;
+        filter: brightness(0);
+        @include breakpoint-up("large") {
+            max-width: 96px;
+        }
+        @include breakpoint-up("extra-large") {
+            max-width: unset;
+        }
+    }
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 22.68px);
+        gap: 0.5rem;
+        @include breakpoint-up("extra-large") {
+            grid-template-columns: repeat(4, 34px);
+        }
+    }
+    @include breakpoint-up("medium") {
+        justify-items: unset;
+    }
+}
+
+
+.footer__bottomnav {
+    grid-area: bottomnav;
+    display: grid;
+    gap: 1.5rem;
+    &-list {
+        display: grid;
+        gap: 2rem;
+    }
+    &-list-section {
+        display: grid;
+        gap: 1rem;
+        @include breakpoint-up("medium") {
+            gap: 0.5rem;
+        }
+        &:last-child {
+            color: $orange2;
+            @include breakpoint-up("medium") {
+                grid-template-columns: repeat(2, 1fr);
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.footer__familylinks {
+    grid-area: familylinks;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: $grey2;
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        padding: 1.5rem;
+        // place-items: center;
+        // padding: 2rem 0;
+        gap: 1rem;
+        &>* {
+            // width: 95.37px;
+            // height: 25.46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 26.46px;
+            min-width: 100%;
+            align-items: center;
+            background-color: $white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.16);
+        }
+    }
+    
+}
+
+.footer__copyright {
+    align-self: end;
+    padding-bottom: 1rem;
+}

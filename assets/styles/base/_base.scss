@@ -4,8 +4,8 @@
 
 /// Set base colors
 $bg-color: #fff;
-$text-color: #000;
-$accent: $orange;
+$text-color: $grey;
+$accent: $orange2;
 
 
 * {
@@ -15,7 +15,7 @@ $accent: $orange;
         outline: 3px dotted $accent;
         outline-offset: 3px;
     }
-    outline: 1px solid salmon;
+    // outline: 1px solid salmon;
 }
 
 body {
@@ -33,12 +33,16 @@ img {
     height: auto;
 }
 
+ul {
+    list-style: none;
+}
+
 /**
  * Basic styles for links
  */
-a {
+a:not(.btn) {
     color: inherit;
-    text-underline-offset: 4px;
+    text-decoration-skip-ink: none;
     &:hover {
         color: $accent;
         // transition: $transition;

@@ -1,17 +1,32 @@
-/* $fs-h1:  4rem;
-$fs-h2: 1.8rem;
-$fs-lead: 1.125rem; 
-$fs-h2: 1.5em;
-$para: 15px; */
 .card {
   margin: 1rem;
   padding: 1rem;
   background-color: bisque;
 }
 
+.card h3 {
+  font-size: 1.06rem;
+  color: hsl(28, 100%, 50%);
+}
+
+.card p {
+  color: hsl(0, 0%, 18%);
+}
+
+#pricing h3 {
+  font-size: 0.875rem;
+}
+
+button,
 .btn {
-  padding: 0.3rem;
-  background-color: thistle;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  padding: 0.93rem;
+  text-decoration: none;
+  color: hsl(0, 0%, 18%);
+  border: 2px solid hsl(28, 100%, 50%);
+  border-radius: 15px;
 }
 
 .list--staticdynamic > li {
@@ -40,6 +55,10 @@ $para: 15px; */
   -webkit-mask-image: url(/assets/images/home/features/features-icon.svg);
           mask-image: url(/assets/images/home/features/features-icon.svg);
   background-color: hsl(31, 100%, 61%);
+}
+
+footer h2 {
+  font-size: 0.875rem;
 }
 
 svg {
@@ -136,7 +155,6 @@ select {
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid salmon;
 }
 *:focus-visible {
   outline: 3px dotted hsl(31, 100%, 61%);
@@ -144,26 +162,118 @@ select {
 }
 
 body {
-  font-family: "Comfortaa", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-color: #fff;
-  color: #000;
+  color: hsl(0, 0%, 40%);
 }
 
 img {
   height: auto;
 }
 
+ul {
+  list-style: none;
+}
+
 /**
  * Basic styles for links
  */
-a {
+a:not(.btn) {
   color: inherit;
-  text-underline-offset: 4px;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
-a:hover {
+a:not(.btn):hover {
   color: hsl(31, 100%, 61%);
+}
+
+/* roboto-regular - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin_latin-ext-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin_latin-ext-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* comfortaa-regular - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/comfortaa-v40-latin_latin-ext-regular.woff2") format("woff2"), url("../fonts/comfortaa-v40-latin_latin-ext-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* comfortaa-500 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/comfortaa-v40-latin_latin-ext-500.woff2") format("woff2"), url("../fonts/comfortaa-v40-latin_latin-ext-500.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* comfortaa-700 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/comfortaa-v40-latin_latin-ext-700.woff2") format("woff2"), url("../fonts/comfortaa-v40-latin_latin-ext-700.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* comfortaa bold from dafont.com */
+@font-face {
+  font-display: swap;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Comfortaa-Bold.woff2") format("woff2");
+}
+h1, h2, .h2, h3, a, button {
+  font-family: "Comfortaa", "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: 3.33rem;
+  font-weight: 900;
+  color: hsl(31, 100%, 61%);
+}
+
+h2, .h2 {
+  font-size: 2.13rem;
+  font-weight: 900;
+  color: hsl(0, 0%, 18%);
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 18%);
+}
+
+p, li {
+  font-size: 0.875rem;
+}
+
+small {
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+
+.txt-black {
+  color: hsl(0, 0%, 0%);
+}
+
+.txt-uppercase {
+  text-transform: uppercase;
 }
 
 .sr-only {
@@ -183,5 +293,109 @@ main {
 }
 
 footer {
-  padding: 0.5rem 0;
+  display: grid;
+  text-align: center;
+  grid-template-areas: "social" "bottomnav" "familylinks" "copyright";
+  gap: 27px;
+  padding-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    grid-template-areas: "social bottomnav familylinks" "copyright bottomnav familylinks";
+    padding-left: 2.5rem;
+    text-align: unset;
+  }
+}
+
+.footer__social {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+.footer__social-logo {
+  max-width: 88px;
+  filter: brightness(0);
+}
+@media screen and (min-width: 1024px) {
+  .footer__social-logo {
+    max-width: 96px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__social-logo {
+    max-width: unset;
+  }
+}
+.footer__social-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 22.68px);
+  gap: 0.5rem;
+}
+@media screen and (min-width: 1440px) {
+  .footer__social-wrapper {
+    grid-template-columns: repeat(4, 34px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__social {
+    justify-items: unset;
+  }
+}
+
+.footer__bottomnav {
+  grid-area: bottomnav;
+  display: grid;
+  gap: 1.5rem;
+}
+.footer__bottomnav-list {
+  display: grid;
+  gap: 2rem;
+}
+.footer__bottomnav-list-section {
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__bottomnav-list-section {
+    gap: 0.5rem;
+  }
+}
+.footer__bottomnav-list-section:last-child {
+  color: hsl(31, 100%, 61%);
+}
+@media screen and (min-width: 768px) {
+  .footer__bottomnav-list-section:last-child {
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 1rem;
+  }
+}
+
+.footer__familylinks {
+  grid-area: familylinks;
+  padding: 2rem 0;
+  text-align: center;
+  background-color: hsl(0, 0%, 84%);
+}
+.footer__familylinks-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+.footer__familylinks-list > * {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 26.46px;
+  min-width: 100%;
+  align-items: center;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.16);
+}
+
+.footer__copyright {
+  align-self: end;
+  padding-bottom: 1rem;
 }/*# sourceMappingURL=main.css.map */

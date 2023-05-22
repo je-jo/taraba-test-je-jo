@@ -4,28 +4,38 @@
 
 
 
-/// Regular font family
+/// Font Family
 
-$sans-serif-stack: 'Comfortaa', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$sans-serif-stack: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$ff-accent: 'Comfortaa', $sans-serif-stack;
 
 /// Colors
 /// 
-$orange: hsl(31, 100%, 61%);
-$white: hsl(0, 0%, 100%);
+$orange1: hsl(28, 100%, 50%); //#FF7800
+$orange2: hsl(31, 100%, 61%); //#FFA039
+$black: hsl(0, 0%, 18%); //#2D2D2D
+$grey: hsl(0, 0%, 40%); //#666666
+$grey2: hsl(0, 0%, 84%); //#D7D7D7
+$white: hsl(0, 0%, 98%); //#FAFAFA
+$black-0: hsl(0, 0%, 0%); //#000000;
+
+
 
 /// Font sizes
 /// 
-/* $fs-h1:  4rem;
-$fs-h2: 1.8rem;
-$fs-lead: 1.125rem; 
-$fs-h2: 1.5em;
-$para: 15px; */
+$fs-h1: 3.33rem; //5.18rem
+$fs-h2: 2.13rem; //2.74rem
+$fs-h3: 1.7rem; //2.2rem
+$fs-reg: 0.875rem; // 1.125rem
+$fs-small: 0.5rem; //0.75rem
+$fs-accent: 1.06rem; //1.378 rem
+
 
 
 /// Design variables
 /// 
 // $min-card-width: 17rem;
-$border-radius: 6px;
+$border-radius: 15px;
 // $transition: ease all 0.2s;
 
 
@@ -39,9 +49,29 @@ $border-radius: 6px;
     background-color: bisque;
 }
 
+.card h3 {
+    font-size: $fs-accent;
+    color: $orange1;
+}
+
+.card p {
+    color: $black;
+}
+
+#pricing h3 {
+    font-size: $fs-reg;
+}
+
+button,
 .btn {
-    padding: 0.3rem;
-    background-color: thistle;
+    display: inline-flex;
+    align-items: center;
+    font-size: $fs-reg;
+    padding: 0.93rem;
+    text-decoration: none;
+    color: $black;
+    border: 2px solid $orange1;
+    border-radius: $border-radius;
 }
 
 .list--staticdynamic>li {
@@ -55,29 +85,34 @@ $border-radius: 6px;
         width: 14px;
         height: 14px;
         mask-image: url(/assets/images/home/staticdynamic/validation-icon.SVG);
-        background-color: $orange;
+        background-color: $orange2;
     }
 }
 
 #features h3 {
     display: grid;
     grid-template-columns: auto 1fr;
+
     &::before {
         content: "";
         width: 17.92px;
         height: 18.76px;
         mask-image: url(/assets/images/home/features/features-icon.svg);
-        background-color: $orange;
+        background-color: $orange2;
     }
 }
 
+footer h2 {
+font-size: $fs-reg;
+}
+
 svg {
-    color: $orange;
-    fill: $orange;
+    color: $orange2;
+    fill: $orange2;
 }
 
 iframe {
-    border-radius: 15px;
+    border-radius: $border-radius
 }
 
 .btn--family {

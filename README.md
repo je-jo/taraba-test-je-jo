@@ -1,1 +1,2 @@
 - [Building the main navigation for a website](https://web.dev/website-navigation/) - Article by Manuel Matuzovic.
+- [google web fonts helper](https://gwfh.mranftl.com/fonts) - A Hassle-Free Way to Self-Host Google Fonts.
