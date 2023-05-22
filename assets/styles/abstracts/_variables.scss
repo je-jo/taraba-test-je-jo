@@ -49,6 +49,26 @@ $border-radius: 6px;
     align-items: center;
     grid-template-columns: auto 1fr;
     gap: 0.5rem;
+
+    &::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        mask-image: url(/assets/images/home/staticdynamic/validation-icon.SVG);
+        background-color: $orange;
+    }
+}
+
+#features h3 {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    &::before {
+        content: "";
+        width: 17.92px;
+        height: 18.76px;
+        mask-image: url(/assets/images/home/features/features-icon.svg);
+        background-color: $orange;
+    }
 }
 
 svg {
@@ -60,4 +80,8 @@ iframe {
     border-radius: 15px;
 }
 
-
+.btn--family {
+    max-width: 137px;
+    max-height: 38px;
+    // background-color: yellow;
+}
