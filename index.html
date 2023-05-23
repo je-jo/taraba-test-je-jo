@@ -27,7 +27,7 @@
         <li><a href="#">Generate QR Codes</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="login.html">Log in</a></li>
-        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="signup.html" class="btn btn--outline">Sign up</a></li>
       </ul>
       <template id="template-theme">
         <button type="button" aria-expanded="false" aria-label="Theme Switch">
@@ -36,94 +36,116 @@
       </template>
     </nav>
   </header>
-  <main>
-    <div class="hero">
-      <h1>Strikingly fast <span class="txt-black">QR codes</span>.</h1>
-      <p>You are one Bolt away from never being too slow again</p>
-      <a href="#" class="btn">Generate QR Codes</a>
-      <a href="signup.html" class="btn">Sign up</a>
+  <main class="flow">
+    <div class="hero wrapper-grid">
+      <div class="flow">
+        <h1>Strikingly fast <span class="txt-black">QR codes</span>.</h1>
+        <p>You are one Bolt away from never being too slow again</p>
+        <div class="wrapper-grid wrapper--buttons">
+          <a href="#" class="btn">Generate QR Codes</a>
+          <a href="signup.html" class="btn btn--outline">Sign up</a>
+        </div>
+      </div>
       <img src="assets/images/home/qr-code-purchase.png" alt="illustration of a man scanning qr code on a bottle"
         width="600" height="600">
       <!-- widths 217, 382, 600 -->
     </div>
-    <section>
-      <h2>QR code Generator.</h2>
-      <p>Your not sure whether to use Dynamic or Static QR codes? Get familiar with both and choose wisely.</p>
-      <h3>
-        <svg class="title-icon" width="22" height="22" aria-hidden="true" focusable="false">
-          <use href="/assets/images/home/staticdynamic/dynamic-icon.SVG#dynamic"></use>
-        </svg>
-        <span>Dynamic QR codes</span>
-      </h3>
-      <p>Have you ever wanted to change the destination of your QR code?
-        If your answer is yes, Dynamic QR codes are perfect for you. They allow you to change the destination of the QR
-        code on-the-fly, whenever you want. It combines multiple technologies to make this happen in the background with
-        the help of our Links tool.</p>
-      <ul class="list--staticdynamic">
-        <li>Advanced scan statistics</li>
-        <li>Change URL destination dynamically</li>
-        <li>Scheduling, expiration limits, A/B Rotation</li>
-        <li>Password protection</li>
-        <li>Country, device & language re-targeting</li>
-      </ul>
-      <iframe width="344" height="205" src="https://www.youtube.com/embed/VWvkhPFKSxY" title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-      <h3>
-        <svg class="title-icon" width="22" height="22" aria-hidden="true" focusable="false">
-          <use href="/assets/images/home/staticdynamic/static-icon.SVG#static"></use>
-        </svg>
-        <span>Static QR codes</span>
-      </h3>
-      <p>Ful customizable QR codes are something you will definitely need for your company.</p>
-      <p>QR codes have no scan limit, also they are fixed, meaning that all the data is directly embedded into the QR
-        code. Once generated and printed for real-world usage, it can't be changed. </p>
-      <ul class="list--staticdynamic">
-        <li>Fully customizable</li>
-        <li>No scan limit</li>
-        <li>No data saved on our servers</li>
-      </ul>
-      <iframe width="344" height="205" src="https://www.youtube.com/embed/VWvkhPFKSxY" title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <section class="flow">
+      <div class="flow--small">
+        <h2>QR code Generator.</h2>
+        <p>Your not sure whether to use Dynamic or Static QR codes? Get familiar with both and choose wisely.</p>
+      </div>
+      <div class="wrapper-grid">
+        <div class="flow--small">
+          <h3>
+            <svg class="title-icon" width="22" height="22" aria-hidden="true" focusable="false">
+              <use href="/assets/images/home/staticdynamic/dynamic-icon.SVG#dynamic"></use>
+            </svg>
+            <span>Dynamic QR codes</span>
+          </h3>
+          <p>Have you ever wanted to change the destination of your QR code?
+            If your answer is yes, Dynamic QR codes are perfect for you. They allow you to change the destination of the
+            QR
+            code on-the-fly, whenever you want. It combines multiple technologies to make this happen in the background
+            with
+            the help of our Links tool.</p>
+            <ul class="list--staticdynamic">
+              <li>Advanced scan statistics</li>
+              <li>Change URL destination dynamically</li>
+              <li>Scheduling, expiration limits, A/B Rotation</li>
+              <li>Password protection</li>
+              <li>Country, device & language re-targeting</li>
+            </ul>
+        </div>
+        <iframe width="344" height="205" src="https://www.youtube.com/embed/VWvkhPFKSxY" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="wrapper-grid">
+        <div class="flow--small">
+          <h3>
+            <svg class="title-icon" width="22" height="22" aria-hidden="true" focusable="false">
+              <use href="/assets/images/home/staticdynamic/static-icon.SVG#static"></use>
+            </svg>
+            <span>Static QR codes</span>
+          </h3>
+          <p>Ful customizable QR codes are something you will definitely need for your company.</p>
+          <p>QR codes have no scan limit, also they are fixed, meaning that all the data is directly embedded into the QR
+            code. Once generated and printed for real-world usage, it can't be changed. </p>
+            <ul class="list--staticdynamic">
+              <li>Fully customizable</li>
+              <li>No scan limit</li>
+              <li>No data saved on our servers</li>
+            </ul>
+        </div>
+        <iframe width="344" height="205" src="https://www.youtube.com/embed/VWvkhPFKSxY" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      
     </section>
-    <section id="features">
-      <h2>With other features</h2>
-      <p>From QR code templates to custom domains, Bolt offers you all the features that you might need.</p>
-      <ul>
-        <li>
+    <section id="features" class="flow">
+      <div class="flow--small">
+        <h2>With other features</h2>
+        <p>From QR code templates to custom domains, Bolt offers you all the features that you might need.</p>
+      </div>
+      <ul class="flow wrapper-grid wrapper-grid--3">
+        <li class="flow--small">
           <h3>QR templates</h3>
           <p>You get 13 built-in QR code templates to get you started right away.</p>
         </li>
-        <li>
+        <li class="flow--small">
           <h3>Privacy</h3>
           <p>We do not store any data of your created QR codes, except the ones that you save in your account willingly.
           </p>
         </li>
-        <li>
+        <li class="flow--small">
           <h3>Highly customizable</h3>
           <p>Create the QR code you need, brand it with your own colors & logo.</p>
         </li>
-        <li>
+        <li class="flow--small">
           <h3>Tracking pixels</h3>
           <p>Facebook, Google Analytics, Google Tag Manager, LinkedIn, Pinterest, Twitter, Quora tracking pixels
             available.</p>
         </li>
-        <li>
+        <li class="flow--small">
           <h3>Projects</h3>
           <p>Easiest way to categorize your managed resources.</p>
         </li>
-        <li>
+        <li class="flow--small">
           <h3>Custom domains</h3>
           <p>Connect your own domain or use our predefined ones.</p>
         </li>
       </ul>
     </section>
-    <section>
-      <h2>QR code types.</h2>
-      <p>QR codes can be used for multiple purposes! So here you have a large array of QR code templates to choose from
-        and get started.</p>
-      <ul>
+    <section class="flow">
+      <div class="flow--small">
+        <h2>QR code types.</h2>
+        <p>QR codes can be used for multiple purposes! So here you have a large array of QR code templates to choose
+          from
+          and get started.</p>
+      </div>
+      <ul class="wrapper-grid wrapper-grid--4">
         <li class="card">
           <h3>
             <svg class="types" width="12.71" height="14.83" aria-hidden="true" focusable="false">
@@ -243,14 +265,19 @@
         </li>
       </ul>
     </section>
-    <section id="pricing">
-      <h2>Simple, transparent pricing.</h2>
-      <p>Not sure if you need Bolt? You can sign up for your free guest account to try Bolt out.</p>
-      <p>If you decide that Bolt could be useful and that you need something more advanced choose the plan that is right
-        for you and your budget.</p>
-      <button>Monthly</button>
-      <button>Annual</button>
-      <button>Lifetime</button>
+    <section id="pricing" class="flow">
+      <div class="flow--small">
+        <h2>Simple, transparent pricing.</h2>
+        <p>Not sure if you need Bolt? You can sign up for your free guest account to try Bolt out.</p>
+        <p>If you decide that Bolt could be useful and that you need something more advanced choose the plan that is
+          right
+          for you and your budget.</p>
+      </div>
+      <div class="wrapper--buttons">
+        <button class="btn btn--square">Monthly</button>
+        <button class="btn btn--outline btn--square">Annual</button>
+        <button class="btn btn--outline btn--square">Lifetime</button>
+      </div>
       <ul>
         <li>
           <h3><span class="txt-uppercase">Guest</span></h3>
@@ -269,7 +296,7 @@
             <li><s>4 QR code types</s></li>
             <li><s>4 QR code types</s></li>
           </ul>
-          <p class="btn btn--disabled">Choose plan</p>
+          <a href="signup.html" class="btn">Choose plan</a>
         </li>
         <li>
           <h3><span class="txt-uppercase">Free</span> with registration</h3>
@@ -331,7 +358,6 @@
       </ul>
     </section>
   </main>
-
   <footer>
     <div class="footer__social">
       <img class="footer__social-logo" src="assets/images/footer/taraba-logo-latin-full-color-white-1.svg"
@@ -351,37 +377,32 @@
               height="34"></a></li>
       </ul>
     </div>
-
     <nav aria-labelledby="bottomnav-title" id="bottomnav" class="footer__bottomnav">
       <h2 id="bottomnav-title">Quick links</h2>
-      <ul class="footer__bottomnav-list">
+      <div class="footer__bottomnav-list">
         <div class="footer__bottomnav-list-section">
-          <li><a href="#">Generate QR Codes</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <a href="#">Generate QR Codes</a>
+          <a href="#pricing">Pricing</a>
         </div>
         <div class="footer__bottomnav-list-section">
-          <li><a href="#">Terms and Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Privacy Policy</a>
         </div>
-      </ul>
+      </div>
     </nav>
-
     <div class="footer__familylinks">
-      <h2>Our family</h2>
-      <ul class="footer__familylinks-list">
-        <li><a href="https://taraba.tech/" target="_blank"><img
-              src="assets/images/footer/trb-tech-logo-solid-white.svg" alt="taraba.tech" width="102" height="16"></a>
-        </li>
-        <li><a href="https://taraba.education/" target="_blank"><img
-              src="assets/images/footer/trb-edu-logo-solid-white.svg" alt="taraba.edu" width="108" height="16"></a></li>
-        <li><a href="https://taraba.rs/" target="_blank"><img
-              src="assets/images/footer/portal-logo-lat-solid-white-1.svg" alt="taraba portal" width="90"
-              height="16"></a></li>
-        <li><a href="https://oakly.events/" target="_blank"><img
-              src="assets/images/footer/oakly-logo-full-color-9.svg" alt="oakly" width="63" height="16"></a></li>
-      </ul>
+      <h2 class="footer__familylinks-title">Our family</h2>
+      <div class="footer__familylinks-list">
+        <a href="https://taraba.tech/" target="_blank" class="btn btn--family"><img
+            src="assets/images/footer/trb-tech-logo-solid-white.svg" alt="taraba.tech" width="102" height="16"></a>
+        <a href="https://taraba.education/" target="_blank" class="btn btn--family"><img
+            src="assets/images/footer/trb-edu-logo-solid-white.svg" alt="taraba.edu" width="108" height="16"></a>
+        <a href="https://taraba.rs/" target="_blank" class="btn btn--family"><img
+            src="assets/images/footer/portal-logo-lat-solid-white-1.svg" alt="taraba portal" width="90" height="16"></a>
+        <a href="https://oakly.events/" target="_blank" class="btn btn--family"><img
+            src="assets/images/footer/oakly-logo-full-color-9.svg" alt="oakly" width="63" height="16"></a>
+      </div>
     </div>
-
     <p class="footer__copyright"><small>Copyright © 2022 Taraba. All rights reserved.</small></p>
   </footer>
 </body>

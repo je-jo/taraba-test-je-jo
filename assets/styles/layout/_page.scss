@@ -3,7 +3,45 @@
 // -----------------------------------------------------------------------------
 
 main {
-    max-width: 140ch;
+    padding: 0 clamp(0.5rem, 2.5%, 2.5rem);
+    background-color: white;
+    margin: 0 auto;
+    max-width: 1295px;
+}
+
+.wrapper-grid {
+    display: grid;
+    align-items: center;
+    gap: 2rem;
+    @include breakpoint-up("medium") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.wrapper-grid--3 {
+    @include breakpoint-up("medium") {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.wrapper-grid--4 {
+    @include breakpoint-up("medium") {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.flow > * + * {
+    margin-top: 1.5rem;
+    @include breakpoint-up("extra-large") {
+        margin-top: 2rem;
+    }
+}
+
+.flow--small > * + * {
+    margin-top: 0.6rem;
+    @include breakpoint-up("extra-large") {
+        margin-top: 1rem;
+    }
 }
 
 

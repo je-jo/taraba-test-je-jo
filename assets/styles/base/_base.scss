@@ -23,7 +23,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     // place-items: center;
-    // line-height: unset;
+    line-height: $lh-md;
     // text-align: center;
     background-color: $bg-color;
     color: $text-color;
@@ -41,8 +41,12 @@ ul {
  * Basic styles for links
  */
 a:not(.btn) {
+    font-size: $fs-reg;
     color: inherit;
     text-decoration-skip-ink: none;
+    @include breakpoint-up("extra-large") {
+        font-size: $fs-links-xl;
+    }
     &:hover {
         color: $accent;
         // transition: $transition;
