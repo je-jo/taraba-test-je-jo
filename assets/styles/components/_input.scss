@@ -9,8 +9,8 @@ input {
     font-size: $fs-reg;
     font-family: $ff-accent;
     font-weight: 300;
-    background-color: $white;
-    border: 1px solid $grey3;
+    background-color: $trb-grey4;
+    border: 1px solid $trb-grey1;
     border-radius: $border-radius;
     @include breakpoint-up("extra-large") {
         font-size: $fs-reg-xl;

@@ -4,7 +4,7 @@ header {
     justify-content: space-between;
     padding: 1.5rem;
     gap: 1rem;
-    background-color: $white;
+    background-color: $trb-grey4;
     box-shadow: 0px 1px 16px rgba(255, 120, 0, 0.2);
     @include breakpoint-up("medium") {
         flex-direction: row;
@@ -39,7 +39,7 @@ header {
     }
 
     .menu-button {
-        color: $black;
+        color: $trb-black2;
     }
     
 

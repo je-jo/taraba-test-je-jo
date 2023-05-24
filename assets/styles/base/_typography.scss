@@ -14,7 +14,7 @@ h1 {
 h2, .h2 {
     font-size: $fs-h2;
     font-weight: 900;
-    color: $black;
+    color: $trb-black2;
     @include breakpoint-up("extra-large") {
         font-size: $fs-h2-xl;
     }
@@ -39,7 +39,7 @@ h2, .h2 {
 h3 {
     font-size: $fs-h3;
     font-weight: 700;
-    color: $black;
+    color: $trb-black2;
     @include breakpoint-up("extra-large") {
         font-size: $fs-h3-xl;
         line-height: $lh-lg;
@@ -68,7 +68,7 @@ small {
 }
 
 .txt-orange {
-    color: $orange2;
+    color: $trb-orange3;
 }
 
 .txt-uppercase {

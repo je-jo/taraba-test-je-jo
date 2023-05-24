@@ -64,7 +64,7 @@ footer {
             gap: 0.5rem;
         }
         &:last-child {
-            color: $orange2;
+            color: $trb-orange3;
             @include breakpoint-up("medium") {
                 grid-template-columns: repeat(2, 1fr);
                 padding-bottom: 1rem;
@@ -77,7 +77,7 @@ footer {
     grid-area: familylinks;
     padding: 2rem 0;
     text-align: center;
-    background-color: $grey2;
+    background-color: $trb-grey2;
     &-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
