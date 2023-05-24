@@ -1,5 +1,6 @@
 footer {
     display: grid;
+    padding-top: 2.8rem;
     text-align: center;
     grid-template-areas:
     "social"
@@ -8,11 +9,13 @@ footer {
     "copyright";
     align-items: end;
     gap: 1.6875rem;
+    background-color: $white-0;
     @include breakpoint-up("medium") {
         grid-template-areas:
         "social bottomnav familylinks"
         "copyright bottomnav familylinks";
         grid-template-columns: 1fr 2fr auto;
+        padding-top: unset;
         padding-left: 2.5rem;
         text-align: unset;
     }

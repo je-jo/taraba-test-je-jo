@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    gap: 1rem;
+    background-color: $white;
+    box-shadow: 0px 1px 16px rgba(255, 120, 0, 0.2);
+    @include breakpoint-up("medium") {
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 0px 2px 10px rgba(45, 45, 45, 0.1);
+    }
+
+    & .logo {
+        max-width: 87px;
+
+        @include breakpoint-up("medium") {
+            max-width: unset;
+        }
+    }
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & a {
+        text-decoration: none;
+    }
+    & button {
+        background-color: transparent;
+        box-shadow: unset;
+        min-width: unset;
+        @include breakpoint-up("medium") {
+            align-self: center;
+        }
+    }
+
+    .menu-button {
+        color: $black;
+    }
+    
+
+    @include breakpoint-up("medium") {
+        flex-direction: row;
+        align-items: center;
+    }
+}

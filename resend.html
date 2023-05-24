@@ -11,13 +11,10 @@
   <title>Resend activation - Bolt</title>
 </head>
 
-<body>
+<body class="page-inner">
   <header>
     <a href="index.html">
-      <img src="assets/images/bolt-logo.svg" 
-      alt="Bolt QR logo"
-      width="147"
-      height="39">
+      <img src="assets/images/bolt-logo.svg" alt="Bolt QR logo" width="147" height="39">
     </a>
     <nav>
       <ul>
@@ -29,20 +26,29 @@
       </ul>
     </nav>
   </header>
+
+
   <main>
-    <h1>Resend activation email</h1>
-    <p>Mails can get lost, but we can send you another activation email for your account.</p>
-    <form action="">
-      <label for="email"><span class="sr-only">Email</span><input type="email" id="email" placeholder="Your email*"></label>
-      <button type="submit">Send activation</button>
-    </form>
-    <p><a href="login.html">Return to Login</a></p>
-    <img src="assets/images/login/resend-activation-email-illustration.png" 
-    alt="illustration of a woman entering password on a phone" 
-    width="548" 
-    height="548"
-    >
-    <!-- widths none, 445, 548 -->
+    <div class="hero wrapper-grid flow">
+      <div class="wrapper-input">
+        <div class="flow--small">
+          <h1 class="h2 txt-orange">Resend activation email</h1>
+          <p>Mails can get lost, but we can send you another activation email for your account.</p>
+        </div>
+        <form action="" class="flow">
+          <label for="email"><span class="sr-only">Email</span><input type="email" id="email"
+              placeholder="Your email*"></label>
+          <button type="submit">Send activation</button>
+        </form>
+        <p><span class="txt-orange"><a href="login.html">Return to Login</a></span></p>
+      </div>
+      <img src="assets/images/login/resend-activation-email-illustration.png"
+        alt="illustration of a woman entering password on a phone" width="548" height="548">
+      <!-- widths none, 445, 548 -->
+    </div>
+
+
+
   </main>
   <footer>
     <div class="footer__social">

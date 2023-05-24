@@ -11,39 +11,61 @@
   <title>Lost password - Bolt</title>
 </head>
 
-<body>
+<body class="page-inner">
   <header>
-    <a href="index.html">
-      <img src="assets/images/bolt-logo.svg" 
-      alt="Bolt QR logo"
-      width="147"
-      height="39">
+    <a href="#" class="logo">
+      <img src="assets/images/bolt-logo.svg" alt="Bolt QR logo" width="147" height="39">
     </a>
-    <nav>
-      <ul>
-        <li>Generate QR Codes</li>
-        <li>Pricing</li>
-        <li><a href="#">Log in</a></li>
-        <li><a href="signup.html">Sign up</a></li>
-        <li>*themetoggle</li>
+    <nav aria-label="Main" id="mainnav" class="menu-header">
+      <!-- template for burger button -->
+      <template id="template-burger">
+        <button type="button" aria-expanded="false" aria-label="Menu" aria-controls="mainnav">
+          <svg width="27" height="12" aria-hidden="true" class="menu-button">
+            <use href="/assets/images/home/menu-icon.svg#menu"></use>
+          </svg>
+        </button>
+      </template>
+
+      <ul id="mainnav-list" class="menu-header">
+        <li><a href="#">Generate QR Codes</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><span class="txt-orange txt-underline"><a href="login.html">Log in</a></span></li>
+        <li><span class="btn btn--outline"><a href="signup.html">Sign up</a></span></li>
       </ul>
+
+      <!-- template for theme switcher button -->
+      <template id="template-theme">
+        <button type="button" aria-expanded="false" aria-label="Theme Switch">
+          <!-- <img src="assets/images/home/theme-icon.svg" alt="" width="18" height="24" aria-hidden="true"> -->
+          <svg width="22" height="28" aria-hidden="true" class="menu-button">
+            <use href="/assets/images/home/theme-icon.svg#theme"></use>
+          </svg>
+        </button>
+      </template>
+
     </nav>
   </header>
+
   <main>
-    <h1>Lost password</h1>
-    <p>We will send you an email with a magic recovery link to reset your password.</p>
-    <form action="">
-      <label for="email"><span class="sr-only">Email</span><input type="email" id="email" placeholder="Your email*"></label>
-      <button type="submit">Send link</button>
-    </form>
-    <p><a href="login.html">Return to Login</a></p>
-    <img src="assets/images/login/lost-password-illustration.png" 
-    alt="illustration of a woman trying to remember her password" 
-    width="505" 
-    height="505"
-    >
+    <div class="hero wrapper-grid flow">
+      <div class="wrapper-input">
+        <div class="flow--small">
+          <h1 class="h2 txt-orange">Lost password</h1>
+          <p>We will send you an email with a magic recovery link to reset your password.</p>
+        </div>
+        <form action="" class="flow">
+          <label for="email"><span class="sr-only">Email</span><input type="email" id="email"
+              placeholder="Your email*"></label>
+          <button type="submit">Send link</button>
+        </form>
+        <p><span class="txt-orange"><a href="login.html">Return to Login</a></span></p>
+      </div>
+      <img src="assets/images/login/lost-password-illustration.png"
+      alt="illustration of a woman trying to remember her password" width="505" height="505">
     <!-- widths none, 445, 505 -->
-  </main>
+    </div>
+</main>
+
   <footer>
     <div class="footer__social">
       <img class="footer__social-logo" src="assets/images/footer/taraba-logo-latin-full-color-white-1.svg"

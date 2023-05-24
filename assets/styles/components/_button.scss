@@ -5,6 +5,7 @@ button,
     align-self: start;
     justify-content: center;
     min-width: 10ch;
+    max-width: 198px;
     min-height: 44px;
     padding: 1.06em 1em;
     font-size: $fs-reg;
@@ -23,6 +24,7 @@ button,
 
     @include breakpoint-up("extra-large") {
         font-size: $fs-reg-xl;
+        max-width: 233px;
     }
 }
 

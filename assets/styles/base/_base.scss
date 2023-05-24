@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 /// Set base colors
-$bg-color: #fff;
+$bg-color: $white;
 $text-color: $grey;
 $accent: $orange2;
 
@@ -27,6 +27,9 @@ body {
     // text-align: center;
     background-color: $bg-color;
     color: $text-color;
+    &.page-inner {
+        background-color: $orange-bg;
+    }
 }
 
 img {
@@ -51,4 +54,13 @@ a:not(.btn) {
         color: $accent;
         // transition: $transition;
     }
+}
+
+svg {
+    color: $orange2;
+    fill: $orange2;
+}
+
+iframe {
+    border-radius: $border-radius;
 }

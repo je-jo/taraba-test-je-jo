@@ -11,13 +11,10 @@
   <title>Sign up - Bolt</title>
 </head>
 
-<body>
+<body class="page-inner">
   <header>
     <a href="index.html">
-      <img src="assets/images/bolt-logo.svg" 
-      alt="Bolt QR logo"
-      width="147"
-      height="39">
+      <img src="assets/images/bolt-logo.svg" alt="Bolt QR logo" width="147" height="39">
     </a>
     <nav>
       <ul>
@@ -29,23 +26,33 @@
       </ul>
     </nav>
   </header>
+
+
   <main>
-    <h1>Sign up.</h1>
-    <p>Welcome to Bolt account creation. Enjoy all the benefits it offers.</p>
-    <form action="">
-      <label for="name"><span class="sr-only">Name</span><input type="text" id="name" placeholder="Your name*"></label>
-      <label for="email"><span class="sr-only">Email</span><input type="email" id="email" placeholder="Your email*"></label>
-      <label for="password"><span class="sr-only">Password</span><input type="password" id="password" placeholder="Your password*"></label>
-      <label for="terms"><input type="checkbox" id="terms" required>Please confirm that you have read and understood the Terms and Conditions and Privacy Policy of the site.*</label>
-      <button type="submit">Create account</button>
-    </form>
-    <p>If you all ready have account, please <a href="login.html">Log in</a></p>
-    <img src="assets/images/signup/sign-up-illustration.png" 
-    alt="illustration of a man with jetpacks flying to the sky" 
-    width="520" 
-    height="520"
-    >
+    <div class="hero wrapper-grid flow">
+      <div class="wrapper-input">
+        <div class="flow--small">
+          <h1 class="h2 txt-orange">Sign up.</h1>
+          <p>Welcome to Bolt account creation. Enjoy all the benefits it offers.</p>
+        </div>
+        <form action="" class="flow">
+          <label for="name"><span class="sr-only">Name</span><input type="text" id="name"
+              placeholder="Your name*"></label>
+          <label for="email"><span class="sr-only">Email</span><input type="email" id="email"
+              placeholder="Your email*"></label>
+          <label for="password"><span class="sr-only">Password</span><input type="password" id="password"
+              placeholder="Your password*"></label>
+          <label for="terms" class="label-checkbox"><input type="checkbox" id="terms" required>Please confirm that you
+            have read and understood
+            the Terms and Conditions and Privacy Policy of the site.*</label>
+          <button type="submit">Create account</button>
+        </form>
+        <p>If you all ready have account, please <span class="txt-orange"><a href="login.html">Log in</a></span></p>
+      </div>
+    <img src="assets/images/signup/sign-up-illustration.png" alt="illustration of a man with jetpacks flying to the sky"
+      width="520" height="520">
     <!-- widths none, 437, 520 -->
+    </div>
   </main>
   <footer>
     <div class="footer__social">

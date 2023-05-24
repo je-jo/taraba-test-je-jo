@@ -1,0 +1,24 @@
+form {
+    display: grid;
+    margin: 1.5rem 0 2rem;
+}
+
+input {
+    width: 100%;
+    padding: 1.06rem;
+    font-size: $fs-reg;
+    font-family: $ff-accent;
+    font-weight: 300;
+    background-color: $white;
+    border: 1px solid $grey3;
+    border-radius: $border-radius;
+    @include breakpoint-up("extra-large") {
+        font-size: $fs-reg-xl;
+        line-height: $lh-lg;
+    }
+}
+
+.label-checkbox {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}

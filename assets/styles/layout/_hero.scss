@@ -1,0 +1,36 @@
+.hero:not(.hero-main) {
+    @include breakpoint-up("large") {
+        padding: 0 2rem;
+    }
+
+    @include breakpoint-up("extra-large") {
+        gap: 6rem;
+    }
+
+    & img {
+        display: none;
+
+        @include breakpoint-up("medium") {
+            display: block;
+            place-self: center;
+            // width: min(100%, 445px);
+        }
+
+        @include breakpoint-up("extra-large") {
+            width: 100%;
+        }
+    }
+
+    .hero-main img {
+        max-width: 217px;
+
+        @include breakpoint-up("medium") {
+            width: min(100%, 382px);
+            place-self: end;
+        }
+
+        @include breakpoint-up("extra-large") {
+            width: 100%;
+        }
+    }
+}
