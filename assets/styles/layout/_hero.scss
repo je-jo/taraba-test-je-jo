@@ -1,7 +1,7 @@
 .hero:not(.hero-main) {
-    @include breakpoint-up("large") {
-        padding: 0 2rem;
-    }
+    // @include breakpoint-up("large") {
+    //     padding: 0 2rem;
+    // }
 
     @include breakpoint-up("extra-large") {
         gap: 6rem;

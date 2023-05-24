@@ -3,9 +3,9 @@
 // -----------------------------------------------------------------------------
 
 main {
-    padding: 5vh clamp(0.5rem, 2.5%, 2.5rem);
-    margin: 0 auto;
-    max-width: 1295px;
+    // padding: 5vh 0;
+    // margin: 0 auto;
+    // max-width: 1295px;
 }
 
 .wrapper-grid {
@@ -41,6 +41,18 @@ main {
     gap: 1.5rem;
     @include breakpoint-up("large") {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+section {
+    &#generator {
+        background-color: $grey-bg;
+    }
+    &#features {
+        background-color: $orange-bg;
+    }
+    &#pricing {
+        background-color: $grey-bg2;
     }
 }
 

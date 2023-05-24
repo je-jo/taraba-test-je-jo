@@ -32,6 +32,10 @@ $white-0: hsl(0, 0%, 100%); //#FFFFFF;
 
 $orange-shadow: adjust-color($trb-orange0, $alpha: -0.75);
 $orange-bg: adjust-color($trb-orange4, $alpha: -0.9);
+// $orange-bg2: adjust-color(hsla(31, 100%, 71%, 0.67), $alpha: -0.9);
+$grey-bg: adjust-color($trb-grey2, $alpha: -0.8);
+$grey-bg2: adjust-color($trb-grey2, $alpha: -0.7);
+
 
 /// Font sizes
 /// 

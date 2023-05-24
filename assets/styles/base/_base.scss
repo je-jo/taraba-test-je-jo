@@ -62,5 +62,13 @@ svg {
 }
 
 iframe {
+    width: min(100%, 344px);
+    height: 100%;
     border-radius: $border-radius;
+    @include breakpoint-up("medium") {
+        width: min(100%, 475px);
+    }
+    @include breakpoint-up("extra-large") {
+        width: 100%;
+    }
 }
