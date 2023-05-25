@@ -6,12 +6,16 @@ header {
     gap: 1rem;
     background-color: $trb-grey4;
     box-shadow: 0px 1px 16px rgba(255, 120, 0, 0.2);
+
     @include breakpoint-up("medium") {
         flex-direction: row;
         align-items: center;
+
         box-shadow: 0px 2px 10px rgba(45, 45, 45, 0.1);
     }
 }
+
+
 
 .header__logo {
     max-width: 87px;
@@ -21,10 +25,10 @@ header {
     }
 }
 
-.header__menu {
+.header__menu,
+.header__links {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 
     & a {
         text-decoration: none;
@@ -33,17 +37,43 @@ header {
     @include breakpoint-up("medium") {
         flex-direction: row;
         align-items: center;
+        width: 100%;
+        justify-content: flex-end;
     }
 }
 
-.menu__button {
+.header__links {
+    gap: 1rem;
+}
+
+// hide links that come after the button with aria expanded false
+button[aria-expanded="false"]+.header__links {
+    display: none;
+    background-color: red;
+}
+
+button[aria-expanded="true"]+.header__links {
+    display: flex;
+    background-color: blue;
+}
+
+
+.header__button {
     background-color: transparent;
     box-shadow: unset;
-    min-width: unset;
+    width: unset;
+
     @include breakpoint-up("medium") {
         align-self: center;
     }
+
     &>svg {
         color: $trb-black2;
+    }
+
+    &--menu {
+        @include breakpoint-up("medium") {
+            display: none;
+        }
     }
 }

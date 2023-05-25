@@ -1,13 +1,17 @@
 const nav = document.querySelector('#mainnav')
 const list = document.querySelector('#mainnav-list')
+
+// Add menu burger button to the page
 const burgerClone = document.querySelector('#template-burger').content.cloneNode(true);
 const buttonBurger = burgerClone.querySelector('button');
+nav.insertBefore(burgerClone, list);
 
 // Toggle aria-expanded attribute
-buttonBurger.addEventListener('click', e => {
+buttonBurger.addEventListener('click', () => {
     // aria-expanded="true" signals that the menu is currently open
-    const isOpen = buttonBurger.getAttribute('aria-expanded') === "true"
-    buttonBurger.setAttribute('aria-expanded', !isOpen);
+    const isClosed = buttonBurger.getAttribute('aria-expanded') === "false" //return boolean
+    console.log(isClosed)
+    buttonBurger.setAttribute('aria-expanded', isClosed);
 });
 
 // Hide list on keydown Escape
@@ -17,10 +21,14 @@ nav.addEventListener('keyup', e => {
     }
 });
 
-// Add the button to the page
-nav.insertBefore(burgerClone, list);
 
+// Add theme button to the page
 const themeSwitchClone = document.querySelector('#template-theme').content.cloneNode(true);
 const buttonTheme = themeSwitchClone.querySelector('button');
-
 nav.appendChild(buttonTheme);
+
+buttonTheme.addEventListener("click", changeTheme);
+
+function changeTheme() {
+    alert("aaa")
+}

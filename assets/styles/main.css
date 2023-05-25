@@ -361,33 +361,56 @@ header {
   }
 }
 
-.header__menu {
+.header__menu,
+.header__links {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
-.header__menu a {
+.header__menu a,
+.header__links a {
   text-decoration: none;
 }
 @media screen and (min-width: 768px) {
-  .header__menu {
+  .header__menu,
+  .header__links {
     flex-direction: row;
     align-items: center;
+    width: 100%;
+    justify-content: flex-end;
   }
 }
 
-.menu__button {
+.header__links {
+  gap: 1rem;
+}
+
+button[aria-expanded=false] + .header__links {
+  display: none;
+  background-color: red;
+}
+
+button[aria-expanded=true] + .header__links {
+  display: flex;
+  background-color: blue;
+}
+
+.header__button {
   background-color: transparent;
   box-shadow: unset;
-  min-width: unset;
+  width: unset;
 }
 @media screen and (min-width: 768px) {
-  .menu__button {
+  .header__button {
     align-self: center;
   }
 }
-.menu__button > svg {
+.header__button > svg {
   color: hsl(0, 0%, 18%);
+}
+@media screen and (min-width: 768px) {
+  .header__button--menu {
+    display: none;
+  }
 }
 
 .wrapper-grid {
