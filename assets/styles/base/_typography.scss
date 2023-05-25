@@ -24,12 +24,14 @@ h2, .h2 {
     }
     &#bottomnav-title {
         font-size: $fs-reg;
+        font-weight: 700;
         @include breakpoint-up("extra-large") {
             font-size: $fs-links-xl;
         }
     }
     &.footer__familylinks-title {
         font-size: 12px;
+        font-weight: 500;
         @include breakpoint-up("large") {
             font-size: $fs-reg;
         }

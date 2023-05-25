@@ -2,11 +2,6 @@
 // This file contains all styles related to the layout of the page.
 // -----------------------------------------------------------------------------
 
-main {
-    // padding: 5vh 0;
-    // margin: 0 auto;
-    // max-width: 1295px;
-}
 
 .wrapper-grid {
     display: grid;
@@ -48,16 +43,35 @@ main {
     }
 }
 
-.wrapper-buttons {
+.wrapper-generator {
     display: grid;
-    // place-items: center;
-    gap: 1.5rem;
-
+    align-items: center;
+    justify-items: stretch;
+    @include breakpoint-up("medium") {
+        grid-template-columns: auto auto;
+        padding-top: 83px;
+    }
     @include breakpoint-up("large") {
-        grid-template-columns: repeat(2, 1fr);
+        height: min(100%, 283px);
+    }
+    @include breakpoint-up("extra-large") {
+        grid-template-columns: auto auto;
+        height: 100%;
+        padding-top: 125px;
+    }
+    &.reverse {
+        @include breakpoint-up("medium") {
+            &>iframe {
+                order: -1;
+            }
+        }
+    }
+    &>.justify-right {
+        @include breakpoint-up("medium") {
+            justify-self: end;
+            }
     }
 }
-
 
 .wrapper-horizontal {
     min-width: 226px;
@@ -65,9 +79,11 @@ main {
     gap: 1.5rem;
     overflow-x: auto;
     padding: 2.5rem clamp(0.5rem, 2.5%, 2.5rem) 5.18rem;
+
     @include breakpoint-up("large") {
         justify-content: center;
     }
+
     &>* {
         flex: 0 0 226px;
 
@@ -76,6 +92,35 @@ main {
         }
     }
 }
+
+.wrapper-buttons {
+    display: grid;
+    gap: 1.5rem;
+
+    @include breakpoint-up("large") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.wrapper-buttons-pricing {
+    display: flex;
+    // justify-content: center;
+    gap: 1rem;
+    @include breakpoint-up("medium") {
+        justify-content: flex-end;
+    }
+
+    @include breakpoint-up("large") {
+        gap: 1.375rem;
+    }
+
+    @include breakpoint-up("extra-large") {
+        gap: 2rem;
+    }
+}
+
+
+
 
 section {
     &#generator {
@@ -89,8 +134,13 @@ section {
     &#pricing {
         display: grid;
         background-color: $grey-bg2;
+
         &>.wrapper {
             width: min(100%, 976px);
+            @include breakpoint-up("large") {
+                padding-left: 0;
+                padding-right: 0;
+            }
             @include breakpoint-up("extra-large") {
                 width: min(100%, 1295px);
             }

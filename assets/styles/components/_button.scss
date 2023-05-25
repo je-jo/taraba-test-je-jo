@@ -5,7 +5,8 @@ button,
     align-self: start;
     justify-content: center;
     min-width: 10ch;
-    max-width: 198px;
+    // max-width: 198px;
+    width: min(100%, 198px);
     min-height: 44px;
     padding: 1.06em 1em;
     font-size: $fs-reg;
@@ -24,7 +25,7 @@ button,
 
     @include breakpoint-up("extra-large") {
         font-size: $fs-reg-xl;
-        max-width: 233px;
+        width: min(100%, 233px);
     }
 }
 
@@ -39,6 +40,13 @@ button,
     padding: 0.6em 1em;
     border-radius: $border-radius-sm;
     outline-width: 1px;
+    width: min(100%, 104px);
+    @include breakpoint-up("extra-large") {
+        width: min(100%, 143px);
+    }
+    @include breakpoint-up("extra-large") {
+        width: min(100%, 200px);
+    }
 }
 
 .btn--family {
