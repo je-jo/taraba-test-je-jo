@@ -1,11 +1,15 @@
-h1, h2, .h2, h3, a, button {
+h1, h2, .h2 {
+    font-family: $ff-bold;
+}
+
+h3, a, button {
     font-family: $ff-accent;
 }
 
 h1 {
     font-size: $fs-h1;
     font-weight: 900;
-    color: $accent;
+    color: $trb-orange3;
     @include breakpoint-up("extra-large") {
         font-size: $fs-h1-xl;
     }
@@ -47,6 +51,7 @@ h3 {
 }
 
 p, li {
+    max-width: 45ch;
     font-size: $fs-reg;
     @include breakpoint-up("extra-large") {
         font-size: $fs-reg-xl;

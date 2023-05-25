@@ -15,7 +15,7 @@
 }
 
 .wrapper {
-    max-width: 1295px;
+    width: min(100%, 1295px);
     margin: 0 auto;
     padding: 2rem clamp(0.5rem, 2.5%, 2.5rem) 3.18rem;
     @include breakpoint-up("extra-large") {

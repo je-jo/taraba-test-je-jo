@@ -1,0 +1,129 @@
+.card {
+    display: grid;
+    padding: 1rem;
+    gap: 0.5rem;
+    color: $trb-black2;
+    border-radius: $border-radius;
+
+    @include breakpoint-up("extra-large") {
+        gap: 1rem;
+    }
+}
+
+.card--features {
+    align-self: baseline;
+
+    &>.card__title {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        line-height: 2;
+        font-size: 1.25rem;
+
+        @include breakpoint-up("extra-large") {
+            font-size: $fs-accent-xl;
+        }
+
+        &::before {
+            content: "";
+            width: 17.92px;
+            height: 18.76px;
+            mask-image: url(/assets/images/home/features/features-icon.svg);
+            background-color: $trb-orange3;
+        }
+    }
+}
+
+.card--types {
+    justify-self: center;
+    width: min(100%, 226px);
+    min-height: 188px;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: $white-0;
+
+    box-shadow: $box-shadow;
+
+    @include breakpoint-up("extra-large") {
+        width: min(100%, 316px);
+        min-height: 263px;
+    }
+
+    &>.card__title {
+        align-self: end;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        gap: 0.5em;
+        font-family: $ff-bold;
+        font-size: $fs-accent;
+        font-weight: 900;
+        color: $trb-orange1;
+    }
+}
+
+.card--pricing {
+    padding: 1.9rem 1.2rem;
+    color: $trb-black3;
+    background: linear-gradient(167.91deg, hsl(18, 100%, 88%) -1.62%, $white-0 104.93%);
+
+    &>.card__title {
+        display: grid;
+        gap: 20px;
+
+        &>h3 {
+            font-size: $fs-reg;
+            border-bottom: 1px solid $trb-black4;
+            @include breakpoint-up("extra-large") {
+                font-size: $fs-reg-xl;
+            }
+        }
+    }
+
+    &.card--special {
+        position: relative;
+        border-color: red;
+        background: linear-gradient(180deg, #FFB769 17.19%, #FFFFFF 100%);
+        &::before {
+            content: "Most popular plan";
+            position: absolute;
+            top: -40px;
+            justify-self: center;
+            padding: 1rem;
+            font-family: $ff-accent;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: center;
+            border-radius: $border-radius;
+            background: linear-gradient(180deg, #FFB769 0%, #FFFFFF 100%);
+            z-index: -1;
+        }
+        &>.card__title {
+            &>h3 {
+                border-bottom: 3px solid $trb-grey4;
+            }
+        }
+    }
+
+
+
+    &>a.btn {
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+.list--staticdynamic>li {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+
+    &::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        mask-image: url(/assets/images/home/staticdynamic/validation-icon.SVG);
+        background-color: $trb-orange3;
+    }
+}

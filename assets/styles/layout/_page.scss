@@ -12,11 +12,14 @@ main {
     display: grid;
     align-items: center;
     gap: 2rem;
+
     @include breakpoint-up("medium") {
         grid-template-columns: repeat(2, 1fr);
     }
+
     &>:first-child {
         max-width: 420px;
+
         @include breakpoint-up("extra-large") {
             max-width: 63ch;
         }
@@ -25,12 +28,22 @@ main {
 
 .wrapper-grid--3 {
     @include breakpoint-up("medium") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up("large") {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 .wrapper-grid--4 {
+    padding: 1.5rem 0;
+
     @include breakpoint-up("medium") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up("large") {
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -39,8 +52,28 @@ main {
     display: grid;
     // place-items: center;
     gap: 1.5rem;
+
     @include breakpoint-up("large") {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.wrapper-horizontal {
+    min-width: 226px;
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 2.5rem clamp(0.5rem, 2.5%, 2.5rem) 5.18rem;
+    @include breakpoint-up("large") {
+        justify-content: center;
+    }
+    &>* {
+        flex: 0 0 226px;
+
+        @include breakpoint-up("extra-large") {
+            flex: 0 0 316px;
+        }
     }
 }
 
@@ -48,15 +81,19 @@ section {
     &#generator {
         background-color: $grey-bg;
     }
+
     &#features {
         background-color: $orange-bg;
     }
+
     &#pricing {
+        display: grid;
         background-color: $grey-bg2;
+        &>.wrapper {
+            width: min(100%, 976px);
+            @include breakpoint-up("extra-large") {
+                width: min(100%, 1295px);
+            }
+        }
     }
 }
-
-
-
-
-

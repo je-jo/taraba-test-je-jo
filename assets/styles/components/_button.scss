@@ -20,7 +20,7 @@ button,
     // transition-property: background, border;
     cursor: pointer;
     box-shadow: inset -2px -2px 10px $trb-orange1,
-        0 10px 20px $orange-shadow;
+        $box-shadow;
 
     @include breakpoint-up("extra-large") {
         font-size: $fs-reg-xl;
