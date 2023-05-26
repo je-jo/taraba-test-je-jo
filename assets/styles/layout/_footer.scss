@@ -39,6 +39,10 @@ footer {
         @include breakpoint-up("extra-large") {
             grid-template-columns: repeat(4, 34px);
         }
+        & svg {
+            width: 100%;
+            height: auto;
+        }
     }
     @include breakpoint-up("medium") {
         justify-items: unset;

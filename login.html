@@ -63,17 +63,22 @@
               placeholder="Your email*"></label>
           <label for="password"><span class="sr-only">Password</span><input type="password" id="password"
               placeholder="Your password*"></label>
-          <label for="remember" class="label-checkbox"><input type="checkbox" id="remember">Remember me</label>
+          <label for="remember" class="label-checkbox">
+            <input type="checkbox" id="remember" class="checkbox">
+            Remember me
+          </label>
           <button type="submit">Log in</button>
         </form>
         <div class="flow--small">
-          <p><span class="txt-orange"><a href="lost.html">Lost Password</a></span> / <span class="txt-orange"><a href="resend.html">Resend Activation</a></span></p>
+          <p><span class="txt-orange"><a href="lost.html">Lost Password</a></span>&nbsp;&nbsp;/&nbsp;&nbsp;<span class="txt-orange"><a href="resend.html">Resend Activation</a></span></p>
           <p>You don’t have an account? <span class="txt-orange"><a href="signup.html">Sign up</a></span></p>
         </div>
       </div>
-      <img src="assets/images/login/log-in-illustration.png"
-        alt="illustration of a woman unlocking a lock on the phone with a giant key" width="498" height="498">
-      <!-- widths none, 443, 498 -->
+      <div class="wrapper-illustration">
+        <img src="assets/images/login/log-in-illustration.png"
+          alt="illustration of a woman unlocking a lock on the phone with a giant key" width="498" height="498">
+        <!-- widths none, 443, 498 -->
+      </div>
     </div>
   </main>
 
@@ -83,18 +88,26 @@
         <use href="assets/images/footer/taraba-logo-latin-full-color-white-1.svg#trblogo"></use>
       </svg>
       <ul class="footer__social-wrapper">
-        <li><a href="https://www.linkedin.com/company/taraba-tech/" target="_blank"><img
-              src="assets/images/footer/linked-in-large.svg" alt="link to taraba.tech linkedin" width="34"
-              height="34"></a></li>
-        <li><a href="https://www.instagram.com/taraba.tech/" target="_blank"><img
-              src="assets/images/footer/instagram-large.svg" alt="link to taraba.tech instagram" width="34"
-              height="34"></a></li>
-        <li><a href="https://www.youtube.com/channel/UCa9GoEPzrYQQMeFDQUUMjIA" target="_blank"><img
-              src="assets/images/footer/you-tube-large.svg" alt="link to taraba.tech youtube" width="34"
-              height="34"></a></li>
-        <li><a href="https://www.facebook.com/taraba.technology" target="_blank"><img
-              src="assets/images/footer/facebook-large.svg" alt="link to taraba.tech facebook" width="34"
-              height="34"></a></li>
+        <li><a href="https://www.linkedin.com/company/taraba-tech/" target="_blank">
+            <svg class="icons-link" width="34" height="34">
+              <use href="assets/images/footer/linked-in-large.svg#linkedin"></use>
+            </svg>
+          </a></li>
+        <li><a href="https://www.instagram.com/taraba.tech/" target="_blank">
+            <svg class="icons-link" width="34" height="34">
+              <use href="assets/images/footer/instagram-large.svg#instagram"></use>
+            </svg>
+          </a></li>
+        <li><a href="https://www.youtube.com/channel/UCa9GoEPzrYQQMeFDQUUMjIA" target="_blank">
+            <svg class="icons-link" width="34" height="34">
+              <use href="assets/images/footer/you-tube-large.svg#youtube"></use>
+            </svg>
+          </a></li>
+        <li><a href="https://www.facebook.com/taraba.technology" target="_blank">
+            <svg class="icons-link" width="34" height="34">
+              <use href="assets/images/footer/facebook-large.svg#facebook"></use>
+            </svg>
+          </a></li>
       </ul>
     </div>
     <nav aria-labelledby="bottomnav-title" id="bottomnav" class="footer__bottomnav">

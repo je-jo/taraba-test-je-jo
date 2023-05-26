@@ -12,6 +12,7 @@ input {
     background-color: $trb-grey4;
     border: 1px solid $trb-grey1;
     border-radius: $border-radius;
+
     @include breakpoint-up("extra-large") {
         font-size: $fs-reg-xl;
         line-height: $lh-lg;
@@ -21,4 +22,35 @@ input {
 .label-checkbox {
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: $fs-reg;
+    color: var(--para-txt-color);
+    @include breakpoint-up("extra-large") {
+        font-size: $fs-reg-xl;
+        line-height: $lh-lg;
+    }
+}
+
+.checkbox {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--para-txt-color);
+    border-radius: 5px;
+    // &:before {
+    //     content: "";
+    //     width: 17.92px;
+    //     height: 18.76px;
+
+    //     background-color: $trb-orange1;
+    // }
+    &:checked {
+        background-color: $trb-orange1;
+        mask-image: url(/assets/images/signup/validation.svg);
+    }
 }

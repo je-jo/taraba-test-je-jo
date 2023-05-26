@@ -36,6 +36,7 @@
     --accent-color: hsl(0, 0%, 0%);
     --icons-menu: hsl(0, 0%, 18%);
     --icons-deco: hsl(28, 100%, 50%);
+    --icons-link: hsl(31, 100%, 61%);
 }
 
 :root.dark {
@@ -139,6 +140,13 @@ svg {
     &.icons-menu {
         color: var(--icons-menu);
         fill: var(--icons-menu);
+    }
+    &.icons-link {
+        color: var(--icons-link);
+        fill: var(--icons-link);
+        &:hover {
+            color: red;
+        }
     }
 }
 
