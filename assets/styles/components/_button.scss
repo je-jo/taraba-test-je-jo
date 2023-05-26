@@ -30,7 +30,7 @@ button,
 }
 
 .btn--outline {
-    color: $trb-black2;
+    color: var(--txt-color);
     background-color: transparent;
     outline: 2px solid $trb-orange1;
     box-shadow: unset;

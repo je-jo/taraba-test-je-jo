@@ -5,20 +5,17 @@
     box-shadow: unset;
     width: unset;
     padding: unset;
-    min-width: 6ch;
+
 
     @include breakpoint-up("medium") {
         align-self: center;
-    }
-
-    &>svg {
-        color: $trb-black2;
     }
 
     &--menu {
         position: absolute;
         top: 1rem;
         right: $header-padding;
+        min-width: 6ch;
         z-index: 100;
 
         &[aria-expanded="true"] {
@@ -31,16 +28,31 @@
         }
     }
 
-    &--theme {
-        position: absolute;
-        top: 1rem;
-        right: calc(2 * $header-padding) + 2;
+}
 
-        @include breakpoint-up("medium") {
-            top: $header-padding;
-            right: $header-padding;
+.theme-checkbox {
+    position: absolute;
+    top: $header-padding;
+    right: calc(2 * $header-padding) + 2.5;
+    color: var(--icons-menu);
+
+    @include breakpoint-up("medium") {
+        align-self: center;
+        top: unset;
+        right: unset;
         }
-    }
+}
+
+
+
+.theme-checkbox>input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--bg-color);
+    margin: 0;
+    border: 0;
+    width: auto;
+    padding: 0;
 }
 
 
@@ -53,7 +65,7 @@ button[aria-expanded="true"]+.header__links {
     width: 187px;
     padding: 8.5rem 1.5rem;
     gap: 1.8rem;
-    background-color: $trb-grey4;
+    background-color: var(--bg-color);
     z-index: 10;
 
     & .nav-link {
@@ -82,7 +94,7 @@ button[aria-expanded="true"]+.header__links {
     font-size: $fs-h1;
 
     @include breakpoint-up("medium") {
-        margin-right: 4rem; //for theme button
+        margin-right: 3rem; //for theme button
         position: unset;
         height: auto;
         width: auto;

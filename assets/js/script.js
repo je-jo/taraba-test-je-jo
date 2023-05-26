@@ -11,7 +11,6 @@ const burgerIcon = buttonBurger.querySelector("use");
 buttonBurger.addEventListener('click', () => {
     // aria-expanded="true" signals that the menu is currently open
     const isClosed = buttonBurger.getAttribute('aria-expanded') === "false" //return boolean
-    console.log(isClosed)
     buttonBurger.setAttribute('aria-expanded', isClosed);
     if (isClosed) {
         burgerIcon.setAttribute("href", "/assets/images/home/sidebar-close.svg#close")
@@ -19,7 +18,7 @@ buttonBurger.addEventListener('click', () => {
         burgerIcon.setAttribute("href", "/assets/images/home/menu-icon.svg#menu")
     }
 
-        
+
 });
 
 // Hide list on keydown Escape
@@ -32,11 +31,23 @@ nav.addEventListener('keyup', e => {
 
 // Add theme button to the page
 const themeSwitchClone = document.querySelector('#template-theme').content.cloneNode(true);
-const buttonTheme = themeSwitchClone.querySelector('button');
+const buttonTheme = themeSwitchClone.querySelector('label');
+const checkboxTheme = buttonTheme.querySelector("input");
 nav.appendChild(buttonTheme);
 
 buttonTheme.addEventListener("click", changeTheme);
 
+
+
 function changeTheme() {
-    alert("aaa")
-}
+    console.log(checkboxTheme.checked)
+    if (checkboxTheme.checked) {
+        document.documentElement.className = "dark"
+    }
+    else {
+        document.documentElement.className = "light"
+    }
+    localStorage.setItem('theme', document.documentElement.className);
+} 
+
+

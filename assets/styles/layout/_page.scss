@@ -47,18 +47,22 @@
     display: grid;
     align-items: center;
     justify-items: stretch;
+
     @include breakpoint-up("medium") {
         grid-template-columns: auto auto;
         padding-top: 83px;
     }
+
     @include breakpoint-up("large") {
         height: min(100%, 283px);
     }
+
     @include breakpoint-up("extra-large") {
         grid-template-columns: auto auto;
         height: 100%;
         padding-top: 125px;
     }
+
     &.reverse {
         @include breakpoint-up("medium") {
             &>iframe {
@@ -66,11 +70,32 @@
             }
         }
     }
+
     &>.justify-right {
         @include breakpoint-up("medium") {
             justify-self: end;
-            }
+        }
     }
+
+    & ul {
+        margin-bottom: 1rem;
+
+        &>li {
+            display: grid;
+            align-items: center;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem;
+
+            &::before {
+                content: "";
+                width: 14px;
+                height: 14px;
+                mask-image: url(/assets/images/home/staticdynamic/validation-icon.SVG);
+                background-color: var(--icons-deco);
+            }
+        }
+    }
+
 }
 
 .wrapper-horizontal {
@@ -106,6 +131,7 @@
     display: flex;
     // justify-content: center;
     gap: 1rem;
+
     @include breakpoint-up("medium") {
         justify-content: flex-end;
     }
@@ -137,10 +163,12 @@ section {
 
         &>.wrapper {
             width: min(100%, 976px);
+
             @include breakpoint-up("large") {
                 padding-left: 0;
                 padding-right: 0;
             }
+
             @include breakpoint-up("extra-large") {
                 width: min(100%, 1295px);
             }

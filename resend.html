@@ -8,22 +8,45 @@
   <meta name="theme-color" content="hsl(31, 100%, 61%)">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
   <link rel="stylesheet" href="assets/styles/main.css">
+  <script src="assets/js/theme-toggle.js"></script>
+  <script src="assets/js/script.js" defer></script>
   <title>Resend activation - Bolt</title>
 </head>
 
 <body class="page-inner">
   <header>
-    <a href="index.html">
-      <img src="assets/images/bolt-logo.svg" alt="Bolt QR logo" width="147" height="39">
+    <a href="index.html" class="header__logo">
+      <svg width="147" height="39" class="logo">
+        <use href="/assets/images/bolt-logo.svg#bolt"></use>
+      </svg>
     </a>
-    <nav>
-      <ul>
-        <li>Generate QR Codes</li>
-        <li>Pricing</li>
-        <li><a href="#">Log in</a></li>
-        <li><a href="signup.html">Sign up</a></li>
-        <li>*themetoggle</li>
+    <nav aria-label="Main" id="mainnav" class="header__menu">
+      <!-- template for burger button -->
+      <template id="template-burger">
+        <button type="button" class="header__button header__button--menu" aria-expanded="false" aria-label="Menu"
+          aria-controls="mainnav">
+          <svg width="27" height="22" aria-hidden="true" class="icons-menu">
+            <use href="/assets/images/home/menu-icon.svg#menu"></use>
+          </svg>
+        </button>
+      </template>
+      <!-- end -->
+      <ul id="mainnav-list" class="header__links">
+        <li><a href="#" class="nav-link">Generate QR Codes</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><span class="txt-orange txt-underline"><a href="login.html" class="nav-link">Log in</a></span></li>
+        <li><span class="btn btn--outline"><a href="signup.html" class="nav-link">Sign up</a></span></li>
       </ul>
+      <!-- template for theme switcher button -->
+      <template id="template-theme">
+        <label for="theme" class="theme-checkbox">
+          <input type="checkbox" id="theme">
+          <svg width="22" height="28" aria-hidden="true" class="icons-menu">
+            <use href="/assets/images/home/theme-icon.svg#theme"></use>
+          </svg>
+        </label>
+      </template>
+      <!-- end -->
     </nav>
   </header>
 
@@ -52,8 +75,9 @@
   </main>
   <footer>
     <div class="footer__social">
-      <img class="footer__social-logo" src="assets/images/footer/taraba-logo-latin-full-color-white-1.svg"
-        alt="Taraba logo" width="136" height="26">
+      <svg class="footer__social-logo" width="136" height="26" aria-hidden="true" focusable="false">
+        <use href="assets/images/footer/taraba-logo-latin-full-color-white-1.svg#trblogo"></use>
+      </svg>
       <ul class="footer__social-wrapper">
         <li><a href="https://www.linkedin.com/company/taraba-tech/" target="_blank"><img
               src="assets/images/footer/linked-in-large.svg" alt="link to taraba.tech linkedin" width="34"

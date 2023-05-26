@@ -9,7 +9,7 @@ footer {
     "copyright";
     align-items: end;
     gap: 1.6875rem;
-    background-color: $white-0;
+    background-color: var(--bg-color-footer);
     @include breakpoint-up("medium") {
         grid-template-areas:
         "social bottomnav familylinks"
@@ -26,11 +26,8 @@ footer {
     justify-items: center;
     gap: 1rem;
     &-logo {
-        max-width: 88px;
-        filter: brightness(0);
-        @include breakpoint-up("large") {
-            max-width: 96px;
-        }
+        max-width: 99px;
+        // filter: brightness(0);
         @include breakpoint-up("extra-large") {
             max-width: unset;
         }
@@ -77,6 +74,7 @@ footer {
     grid-area: familylinks;
     padding: 2rem 0;
     text-align: center;
+    color: $trb-black2;
     background-color: $trb-grey2;
     &-list {
         display: grid;

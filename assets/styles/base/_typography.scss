@@ -9,7 +9,7 @@ h3, a, button {
 h1 {
     font-size: $fs-h1;
     font-weight: 900;
-    color: $trb-orange3;
+    color: var(--h1-color);
     @include breakpoint-up("extra-large") {
         font-size: $fs-h1-xl;
     }
@@ -18,7 +18,6 @@ h1 {
 h2, .h2 {
     font-size: $fs-h2;
     font-weight: 900;
-    color: $trb-black2;
     @include breakpoint-up("extra-large") {
         font-size: $fs-h2-xl;
     }
@@ -45,7 +44,6 @@ h2, .h2 {
 h3 {
     font-size: $fs-h3;
     font-weight: 700;
-    color: $trb-black2;
     @include breakpoint-up("extra-large") {
         font-size: $fs-h3-xl;
         line-height: $lh-lg;
@@ -55,6 +53,7 @@ h3 {
 p, li {
     max-width: 45ch;
     font-size: $fs-reg;
+    color: var(--para-txt-color);
     @include breakpoint-up("extra-large") {
         font-size: $fs-reg-xl;
         line-height: $lh-lg;
@@ -70,8 +69,8 @@ small {
     }
 }
 
-.txt-black {
-    color: $black-0;
+.txt-accent {
+    color: var(--accent-color);
 }
 
 .txt-orange {

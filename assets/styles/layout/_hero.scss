@@ -1,9 +1,40 @@
+.hero-img-wrapper {
+    display: inline-block;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: $trb-orange1;
+        mix-blend-mode: hue;
+    }
+}
+
+.hero-main img {
+    width: min(100%, 217px);
+
+    @include breakpoint-up("medium") {
+        width: min(100%, 382px);
+        place-self: end;
+    }
+
+    @include breakpoint-up("extra-large") {
+        width: 100%;
+    }
+}
+
+.dark .hero-main img {
+    filter: invert(1);
+}
+
 .hero:not(.hero-main) {
-    // @include breakpoint-up("large") {
-    //     padding: 0 2rem;
-    // }
+
     width: min(100%, 900px);
     margin: 0 auto;
+
     @include breakpoint-up("extra-large") {
         width: min(100%, 1295px);
         gap: 6rem;
@@ -23,16 +54,5 @@
         }
     }
 
-    .hero-main img {
-        max-width: 217px;
-
-        @include breakpoint-up("medium") {
-            width: min(100%, 382px);
-            place-self: end;
-        }
-
-        @include breakpoint-up("extra-large") {
-            width: 100%;
-        }
-    }
 }
+

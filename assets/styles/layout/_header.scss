@@ -5,6 +5,7 @@ header {
     padding: $header-padding;
     position: relative;
     background-color: $trb-grey4;
+    background-color: var(--bg-color);
     box-shadow: 0px 1px 16px rgba(255, 120, 0, 0.2);
 
     @include breakpoint-up("medium") {
@@ -16,10 +17,12 @@ header {
 }
 
 .header__logo {
-    max-width: 87px;
-
-    @include breakpoint-up("medium") {
-        max-width: unset;
+    &>svg {
+        width: 87px;
+        // height: 23px;
+        @include breakpoint-up("medium") {
+            width: 100%;
+                }
     }
 }
 
