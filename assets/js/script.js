@@ -4,7 +4,8 @@ const list = document.querySelector('#mainnav-list')
 // Add menu burger button to the page
 const burgerClone = document.querySelector('#template-burger').content.cloneNode(true);
 const buttonBurger = burgerClone.querySelector('button');
-nav.insertBefore(burgerClone, list);
+nav.insertBefore(buttonBurger, list);
+const burgerIcon = buttonBurger.querySelector("use");
 
 // Toggle aria-expanded attribute
 buttonBurger.addEventListener('click', () => {
@@ -12,6 +13,13 @@ buttonBurger.addEventListener('click', () => {
     const isClosed = buttonBurger.getAttribute('aria-expanded') === "false" //return boolean
     console.log(isClosed)
     buttonBurger.setAttribute('aria-expanded', isClosed);
+    if (isClosed) {
+        burgerIcon.setAttribute("href", "/assets/images/home/sidebar-close.svg#close")
+    } else {
+        burgerIcon.setAttribute("href", "/assets/images/home/menu-icon.svg#menu")
+    }
+
+        
 });
 
 // Hide list on keydown Escape

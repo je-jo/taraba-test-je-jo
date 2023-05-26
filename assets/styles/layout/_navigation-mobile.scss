@@ -1,0 +1,94 @@
+/* navigation, only relevant if there's javascript, buttons are added with js */
+
+.header__button {
+    background-color: transparent;
+    box-shadow: unset;
+    width: unset;
+    padding: unset;
+    min-width: 6ch;
+
+    @include breakpoint-up("medium") {
+        align-self: center;
+    }
+
+    &>svg {
+        color: $trb-black2;
+    }
+
+    &--menu {
+        position: absolute;
+        top: 1rem;
+        right: $header-padding;
+        z-index: 100;
+
+        &[aria-expanded="true"] {
+            top: 2.375rem;
+            right: 2.375rem;
+        }
+
+        @include breakpoint-up("medium") {
+            display: none;
+        }
+    }
+
+    &--theme {
+        position: absolute;
+        top: 1rem;
+        right: calc(2 * $header-padding) + 2;
+
+        @include breakpoint-up("medium") {
+            top: $header-padding;
+            right: $header-padding;
+        }
+    }
+}
+
+
+// styles for expanded menu (menu after the button with aria expanded true
+button[aria-expanded="true"]+.header__links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 187px;
+    padding: 8.5rem 1.5rem;
+    gap: 1.8rem;
+    background-color: $trb-grey4;
+    z-index: 10;
+
+    & .nav-link {
+        font-size: $fs-reg-xl;
+        @include breakpoint-up("medium") {
+            font-size: $fs-reg;
+        }
+        @include breakpoint-up("extra-large") {
+            font-size: $fs-reg-xl;
+        }
+    }
+}
+
+// hide menu that come after the button with aria expanded false
+button[aria-expanded="false"]+.header__links {
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transform: translateX(100%);
+}
+
+// if there's javascript, make room for theme button on large screens and revert all mobile styles, regardless of button state
+button[aria-expanded="false"]+.header__links,
+button[aria-expanded="true"]+.header__links {
+    font-size: $fs-h1;
+
+    @include breakpoint-up("medium") {
+        margin-right: 4rem; //for theme button
+        position: unset;
+        height: auto;
+        width: auto;
+        padding: unset;
+        opacity: unset;
+        visibility: unset;
+        transform: unset;
+    }
+}

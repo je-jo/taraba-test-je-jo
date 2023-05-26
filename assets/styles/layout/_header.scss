@@ -2,8 +2,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.5rem;
-    gap: 1rem;
+    padding: $header-padding;
+    position: relative;
     background-color: $trb-grey4;
     box-shadow: 0px 1px 16px rgba(255, 120, 0, 0.2);
 
@@ -14,8 +14,6 @@ header {
         box-shadow: 0px 2px 10px rgba(45, 45, 45, 0.1);
     }
 }
-
-
 
 .header__logo {
     max-width: 87px;
@@ -29,6 +27,7 @@ header {
 .header__links {
     display: flex;
     flex-direction: column;
+    
 
     & a {
         text-decoration: none;
@@ -43,37 +42,9 @@ header {
 }
 
 .header__links {
+    padding: 1rem 0;
     gap: 1rem;
-}
-
-// hide links that come after the button with aria expanded false
-button[aria-expanded="false"]+.header__links {
-    display: none;
-    background-color: red;
-}
-
-button[aria-expanded="true"]+.header__links {
-    display: flex;
-    background-color: blue;
-}
-
-
-.header__button {
-    background-color: transparent;
-    box-shadow: unset;
-    width: unset;
-
     @include breakpoint-up("medium") {
-        align-self: center;
-    }
-
-    &>svg {
-        color: $trb-black2;
-    }
-
-    &--menu {
-        @include breakpoint-up("medium") {
-            display: none;
-        }
+        padding: 0;
     }
 }

@@ -16,8 +16,9 @@
 'base/helpers';
 
 // 4. Layout-related sections
-@import 'layout/header',
-'layout/page',
+@import 'layout/page',
+'layout/header',
+'layout/navigation-mobile',
 'layout/hero',
 'layout/footer';
 
