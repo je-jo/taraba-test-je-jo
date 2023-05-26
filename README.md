@@ -3,7 +3,7 @@
 ### Linkovi
 
 - [Repo](https://github.com/je-jo/taraba-test-je-jo)
-- [Live](...)
+- [Live](https://taraba-test-je-jo.netlify.app/)
 
 ### Korišćeno
 
