@@ -92,6 +92,7 @@ button[aria-expanded="false"]+.header__links {
 button[aria-expanded="false"]+.header__links,
 button[aria-expanded="true"]+.header__links {
     font-size: $fs-h1;
+    transition: ease opacity,transform 0.4s;
 
     @include breakpoint-up("medium") {
         margin-right: 3rem; //for theme button

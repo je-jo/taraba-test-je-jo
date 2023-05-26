@@ -17,8 +17,6 @@ buttonBurger.addEventListener('click', () => {
     } else {
         burgerIcon.setAttribute("href", "/assets/images/home/menu-icon.svg#menu")
     }
-
-
 });
 
 // Hide list on keydown Escape
@@ -38,7 +36,7 @@ nav.appendChild(buttonTheme);
 buttonTheme.addEventListener("click", changeTheme);
 
 
-
+// change theme and save to local storage
 function changeTheme() {
     console.log(checkboxTheme.checked)
     if (checkboxTheme.checked) {
@@ -48,6 +46,29 @@ function changeTheme() {
         document.documentElement.className = "light"
     }
     localStorage.setItem('theme', document.documentElement.className);
-} 
+}
+
+
+// center special card on load
+window.addEventListener("load", function () {
+    let container = document.querySelector(".wrapper-horizontal");
+    let middle = container.children[2];
+    container.scrollLeft = middle.offsetLeft +
+        middle.offsetWidth / 2 - container.offsetWidth / 2;
+});
+
+// form validation
+
+const form = document.querySelector(".form-signup")
+const termsCheck = document.querySelector("#terms");
+
+form.addEventListener("submit", (e) => {
+    
+    if (termsCheck.validity.valueMissing) {
+        termsCheck.parentElement.style.color = "#FF1934"
+        termsCheck.style.borderColor = "#FF1934"
+        e.preventDefault();
+    }
+})
 
 

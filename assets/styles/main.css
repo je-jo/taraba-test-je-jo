@@ -203,12 +203,15 @@ svg.icons-menu {
   color: var(--icons-menu);
   fill: var(--icons-menu);
 }
+svg.icons-menu:hover {
+  filter: drop-shadow(0px 0px 4px var(--icons-deco));
+}
 svg.icons-link {
   color: var(--icons-link);
   fill: var(--icons-link);
 }
 svg.icons-link:hover {
-  color: red;
+  filter: drop-shadow(0px 0px 4px hsl(31, 100%, 80%));
 }
 
 iframe {
@@ -471,6 +474,7 @@ small {
   gap: 1.5rem;
   overflow-x: auto;
   padding: 2.5rem clamp(0.5rem, 2.5%, 2.5rem) 5.18rem;
+  scroll-snap-type: x mandatory;
 }
 @media screen and (min-width: 1024px) {
   .wrapper-horizontal {
@@ -479,6 +483,7 @@ small {
 }
 .wrapper-horizontal > * {
   flex: 0 0 226px;
+  scroll-snap-align: center;
 }
 @media screen and (min-width: 1440px) {
   .wrapper-horizontal > * {
@@ -687,6 +692,7 @@ button[aria-expanded=false] + .header__links {
 button[aria-expanded=false] + .header__links,
 button[aria-expanded=true] + .header__links {
   font-size: 3.33rem;
+  transition: ease opacity, transform 0.4s;
 }
 @media screen and (min-width: 768px) {
   button[aria-expanded=false] + .header__links,
@@ -885,6 +891,10 @@ button,
   cursor: pointer;
   box-shadow: inset -2px -2px 10px hsl(28, 100%, 50%), 0 10px 20px rgba(143, 60, 0, 0.25);
 }
+button:hover,
+.btn:hover {
+  filter: drop-shadow(0px 0px 4px var(--icons-deco));
+}
 @media screen and (min-width: 1440px) {
   button,
   .btn {
@@ -1026,8 +1036,9 @@ button,
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
-  border-radius: 15px;
+  color: hsl(0, 0%, 40%);
   background: linear-gradient(180deg, #FFB769 0%, #FFFFFF 100%);
+  border-radius: 15px;
   z-index: -1;
 }
 .card--pricing.card--special > .card__title > h3 {
@@ -1062,10 +1073,10 @@ input {
 .label-checkbox {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
   color: var(--para-txt-color);
+  transition: ease color 0.1s;
 }
 @media screen and (min-width: 1440px) {
   .label-checkbox {
@@ -1086,6 +1097,7 @@ input {
   height: 25px;
   border: 2px solid var(--para-txt-color);
   border-radius: 5px;
+  transition: ease background 0.2s;
 }
 .checkbox:checked {
   background-color: hsl(28, 100%, 50%);

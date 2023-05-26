@@ -2,6 +2,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    // width: min(100%, 1900px);
+    // margin: 0 auto;
     padding: $header-padding;
     position: relative;
     background-color: $trb-grey4;
